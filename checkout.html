@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#321b12"><title>Checkout — Cacao Club</title><link rel="stylesheet" href="styles.css"></head>
+<body class="checkout-page">
+<div class="announcement"><span>SMALL BATCH. BIG FLAVOUR.</span><span>MADE FOR YOUR DAILY PAUSE.</span></div>
+<header class="header"><a class="logo" href="index.html">cacao<span>club</span><i>®</i></a><nav class="desktop-nav"><a href="index.html#shop">KEEP SHOPPING</a><a href="account.html">ACCOUNT</a></nav><a class="cart-trigger" href="index.html#shop">BACK TO SHOP ↗</a></header>
+<main class="checkout-shell"><p class="eyebrow">ALMOST YOURS / CHECKOUT</p><h1 class="checkout-title">LET'S MAKE<br>THIS OFFICIAL<span class="dot">.</span></h1>
+<div class="checkout-layout"><form class="checkout-form" id="checkout-form"><h2>Delivery details</h2><div class="checkout-notice" id="auth-notice">To place an order, sign in or create an account first. <a href="account.html"><u>Go to account</u></a>.</div>
+<div class="form-grid">
+<div class="form-field"><label for="first-name">FIRST NAME</label><input id="first-name" name="first_name" autocomplete="given-name" required></div>
+<div class="form-field"><label for="last-name">LAST NAME</label><input id="last-name" name="last_name" autocomplete="family-name" required></div>
+<div class="form-field full"><label for="checkout-email">EMAIL ADDRESS</label><input id="checkout-email" type="email" name="email" autocomplete="email" required></div>
+<div class="form-field full"><label for="address">STREET ADDRESS</label><input id="address" name="address" autocomplete="street-address" required></div>
+<div class="form-field"><label for="city">CITY</label><input id="city" name="city" autocomplete="address-level2" required></div>
+<div class="form-field"><label for="region">STATE / REGION</label><input id="region" name="region" autocomplete="address-level1" required></div>
+<div class="form-field"><label for="postal">POSTAL CODE</label><input id="postal" name="postal_code" autocomplete="postal-code" required></div>
+<div class="form-field"><label for="country">COUNTRY</label><select id="country" name="country" required><option value="">Choose country</option><option>India</option><option>United States</option><option>Canada</option><option>United Kingdom</option><option>Australia</option><option>Other</option></select></div>
+</div><div class="form-field"><label for="notes">ORDER NOTES (OPTIONAL)</label><textarea id="notes" name="notes" rows="3" placeholder="Anything we should know?"></textarea></div>
+<button class="btn btn-dark" id="order-now" type="submit">ORDER NOW ↗</button><div class="checkout-message" id="checkout-message" aria-live="polite"></div><p class="product-type">DEMO STOREFRONT: NO PAYMENT IS TAKEN ON THIS PAGE.</p></form>
+<aside class="order-summary"><h2>YOUR ORDER</h2><div id="checkout-items"></div><div class="summary-line"><span>SUBTOTAL</span><strong id="checkout-subtotal">$0.00</strong></div><div class="summary-line"><span>SHIPPING</span><strong>Calculated later</strong></div><div class="summary-line total"><span>ORDER TOTAL</span><strong id="checkout-total">$0.00</strong></div><p class="product-type">Your order is recorded after you select “Order now”. This demo does not collect payment details.</p></aside></div></main>
+<footer class="footer"><div class="footer-bottom"><span>© 2026 CACAO CLUB CHOCOLATE CO.</span><a href="index.html">BACK TO SHOP ↑</a></div><div class="footer-big">CACAO CLUB</div></footer>
+<script src="supabase-config.js"></script><script type="module" src="checkout.js"></script></body></html>

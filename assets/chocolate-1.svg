@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 520" role="img" aria-label="Cacao Club DARK RASPBERRY chocolate package">
+<defs>
+ <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#ed5a7c"/><stop offset=".58" stop-color="#7d1638"/><stop offset="1" stop-color="#321b12"/></linearGradient>
+ <linearGradient id="foil" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#fff3e1" stop-opacity=".3"/><stop offset=".45" stop-color="#fff3e1" stop-opacity="0"/><stop offset="1" stop-color="#321b12" stop-opacity=".28"/></linearGradient>
+ <filter id="shadow" x="-30%" y="-20%" width="160%" height="160%"><feDropShadow dx="13" dy="18" stdDeviation="13" flood-color="#321b12" flood-opacity=".25"/></filter>
+</defs>
+<rect width="420" height="520" fill="none"/>
+<ellipse cx="218" cy="455" rx="128" ry="22" fill="#321b12" opacity=".12"/>
+<g transform="translate(70 30) rotate(-5 140 220)" filter="url(#shadow)">
+ <path d="M24 22 L270 8 L294 418 L8 438 Z" fill="url(#bg)" stroke="#321b12" stroke-width="5"/>
+ <path d="M24 22 L270 8 L294 418 L8 438 Z" fill="url(#foil)"/>
+ <path d="M24 22 L270 8 L265 64 L19 78 Z" fill="#fff3e1" opacity=".16"/>
+ <path d="M12 390 L290 370 L294 418 L8 438 Z" fill="#321b12" opacity=".35"/>
+ <text x="150" y="105" text-anchor="middle" fill="#fff3e1" font-family="Arial,sans-serif" font-size="30" font-weight="900" letter-spacing="-2">cacao club</text>
+ <text x="150" y="129" text-anchor="middle" fill="#fff3e1" font-family="Arial,sans-serif" font-size="10" letter-spacing="3">CHOCOLATE CO.</text>
+ <circle cx="150" cy="225" r="83" fill="#fff3e1" opacity=".13"/>
+ <g fill="#321b12" stroke="#fff3e1" stroke-opacity=".45" stroke-width="2">
+  <rect x="91" y="177" width="56" height="56" rx="8" transform="rotate(-12 119 205)"/>
+  <rect x="150" y="195" width="58" height="56" rx="8" transform="rotate(9 179 223)"/>
+  <rect x="111" y="239" width="58" height="53" rx="8" transform="rotate(7 140 265)"/>
+ </g>
+ <g fill="#fff3e1" opacity=".24">
+  <path d="M103 187 l25 -5 l-4 25 l-23 4z"/><path d="M162 204 l28 -3 l-3 23 l-23 5z"/><path d="M122 248 l27 -4 l-2 22 l-23 4z"/>
+ </g>
+ <text x="150" y="330" text-anchor="middle" fill="#fff3e1" font-family="Arial,sans-serif" font-size="27" font-weight="900">DARK</text>
+ <text x="150" y="360" text-anchor="middle" fill="#fff3e1" font-family="Arial,sans-serif" font-size="27" font-weight="900">RASPBERRY</text>
+ <path d="M70 382 Q150 365 230 382" fill="none" stroke="#fff3e1" stroke-width="2" opacity=".6"/>
+ <text x="150" y="405" text-anchor="middle" fill="#fff3e1" font-family="Arial,sans-serif" font-size="11" letter-spacing="2">BOLD FLAVOUR · 85G</text>
+</g>
+<g fill="#7d1638" opacity=".85"><circle cx="340" cy="100" r="17"/><circle cx="58" cy="360" r="11"/><circle cx="338" cy="365" r="8"/></g>
+</svg>

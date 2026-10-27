@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#321b12"><title>Your Account — Cacao Club</title><link rel="stylesheet" href="styles.css"></head>
+<body><div class="announcement"><span>SMALL BATCH. BIG FLAVOUR.</span><span>MADE FOR YOUR DAILY PAUSE.</span></div>
+<header class="header"><a class="logo" href="index.html">cacao<span>club</span><i>®</i></a><nav class="desktop-nav"><a href="index.html#shop">SHOP ALL</a><a href="index.html#story">OUR STORY</a></nav><a class="cart-trigger" href="checkout.html">CHECKOUT ↗</a></header>
+<main class="auth-shell"><section class="auth-card"><p class="eyebrow">WELCOME TO THE CLUB</p><h1 id="auth-title">GOOD TO<br>SEE YOU<span class="dot">.</span></h1><p id="auth-description">Sign in to manage your account and make checkout a little easier.</p><div id="auth-signed-in" hidden><div class="checkout-notice" id="signed-in-details"></div><div class="account-bar"><a class="btn btn-lime" href="checkout.html">CONTINUE TO CHECKOUT ↗</a><button class="btn btn-dark" id="sign-out">SIGN OUT</button></div></div>
+<div id="auth-form-area">
+<div class="demo-card" style="border: 1.5px dashed var(--brown); background: #fdf1dc; border-radius: 6px; padding: 16px; margin-bottom: 20px; text-align: center;">
+  <p class="eyebrow" style="margin: 0 0 5px; color: var(--red);">INSTANT DEMO</p>
+  <h3 style="margin: 0 0 6px; font-size: 16px; letter-spacing: -0.03em;">TRY WITH DEMO ACCOUNT</h3>
+  <p style="margin: 0 0 12px; font-size: 11px; line-height: 1.4; color: #5c3b2d;">No sign-up or password required. Jump straight into the full member experience.</p>
+  <button type="button" class="btn btn-lime" id="demo-account-btn" style="width: 100%; justify-content: center; font-weight: 700;">⚡ USE DEMO ACCOUNT (1-CLICK) ↗</button>
+</div>
+<div style="display: flex; align-items: center; text-align: center; margin: 16px 0; color: #7b6256; font: 9px var(--mono);"><span style="flex: 1; border-bottom: 1px solid #321b1225;"></span><span style="padding: 0 10px; letter-spacing: 0.08em;">OR SIGN IN WITH EMAIL</span><span style="flex: 1; border-bottom: 1px solid #321b1225;"></span></div>
+<div class="auth-tabs"><button type="button" class="auth-tab active" data-mode="login">SIGN IN</button><button type="button" class="auth-tab" data-mode="signup">CREATE ACCOUNT</button></div>
+<form id="account-form"><div class="form-field" id="full-name-field" hidden><label for="full-name">FULL NAME</label><input id="full-name" name="full_name" autocomplete="name"></div><div class="form-field"><label for="account-email">EMAIL ADDRESS</label><input id="account-email" name="email" type="email" autocomplete="email" required></div><div class="form-field"><label for="account-password">PASSWORD</label><input id="account-password" name="password" type="password" autocomplete="current-password" minlength="6" required></div><button class="btn btn-dark" id="auth-submit" type="submit">SIGN IN ↗</button></form><div class="auth-message" id="auth-message" aria-live="polite"></div><p class="auth-switch" id="auth-switch">New to the club? <a href="#" data-switch="signup">Create an account</a></p></div></section></main>
+<footer class="footer"><div class="footer-bottom"><span>© 2026 CACAO CLUB CHOCOLATE CO.</span><a href="index.html">BACK TO SHOP ↑</a></div><div class="footer-big">CACAO CLUB</div></footer>
+<script src="supabase-config.js"></script><script type="module" src="account.js"></script></body></html>
