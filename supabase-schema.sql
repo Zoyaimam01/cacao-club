@@ -118,14 +118,14 @@ begin
     v_quantity := (v_item->>'quantity')::integer;
     if v_quantity < 1 or v_quantity > 50 then raise exception 'Invalid item quantity.'; end if;
     case v_product_id
-      when 1 then v_price:=8.50; v_name:='72% Dark Chocolate Bar with Raspberry';
-      when 2 then v_price:=11.00; v_name:='72% Dark Chocolate Clusters with Raspberry';
-      when 3 then v_price:=5.50; v_name:='Mini 72% Dark Chocolate Bar with Raspberry';
-      when 4 then v_price:=8.00; v_name:='Sea Salt Crunch Chocolate Bar';
-      when 5 then v_price:=10.00; v_name:='Milk Chocolate Hazelnut Bites';
-      when 6 then v_price:=28.00; v_name:='The Daily Pause Gift Box';
-      when 7 then v_price:=8.50; v_name:='Salted Caramel Chocolate Bar';
-      when 8 then v_price:=34.00; v_name:='Chocolate Discovery Box';
+      when 1 then v_price:=28.00; v_name:='Affirmations Daily Pause Chocolate Gift Box';
+      when 2 then v_price:=9.50; v_name:='Artisan Wild Cranberry & Roasted Nut Bar';
+      when 3 then v_price:=11.00; v_name:='Dark Chocolate Almond & Cranberry Bites';
+      when 4 then v_price:=34.00; v_name:='Artisanal Chocolate Baton Tasting Box';
+      when 5 then v_price:=8.50; v_name:='Marshmallow Cream & Salted Caramel Peanut Bar';
+      when 6 then v_price:=8.50; v_name:='Whole Hazelnut Cream Stuffed Chocolate Bar';
+      when 7 then v_price:=10.00; v_name:='Sicilian Pistachio & Gold Dust Chocolate Bar';
+      when 8 then v_price:=10.50; v_name:='Raspberry Gold Leaf & Flaked Almond Dark Bar';
       else raise exception 'Unknown product in order.';
     end case;
     v_subtotal := v_subtotal + v_price * v_quantity;
@@ -144,14 +144,14 @@ begin
     v_product_id := (v_item->>'product_id')::bigint;
     v_quantity := (v_item->>'quantity')::integer;
     case v_product_id
-      when 1 then v_price:=8.50; v_name:='72% Dark Chocolate Bar with Raspberry';
-      when 2 then v_price:=11.00; v_name:='72% Dark Chocolate Clusters with Raspberry';
-      when 3 then v_price:=5.50; v_name:='Mini 72% Dark Chocolate Bar with Raspberry';
-      when 4 then v_price:=8.00; v_name:='Sea Salt Crunch Chocolate Bar';
-      when 5 then v_price:=10.00; v_name:='Milk Chocolate Hazelnut Bites';
-      when 6 then v_price:=28.00; v_name:='The Daily Pause Gift Box';
-      when 7 then v_price:=8.50; v_name:='Salted Caramel Chocolate Bar';
-      when 8 then v_price:=34.00; v_name:='Chocolate Discovery Box';
+      when 1 then v_price:=28.00; v_name:='Affirmations Daily Pause Chocolate Gift Box';
+      when 2 then v_price:=9.50; v_name:='Artisan Wild Cranberry & Roasted Nut Bar';
+      when 3 then v_price:=11.00; v_name:='Dark Chocolate Almond & Cranberry Bites';
+      when 4 then v_price:=34.00; v_name:='Artisanal Chocolate Baton Tasting Box';
+      when 5 then v_price:=8.50; v_name:='Marshmallow Cream & Salted Caramel Peanut Bar';
+      when 6 then v_price:=8.50; v_name:='Whole Hazelnut Cream Stuffed Chocolate Bar';
+      when 7 then v_price:=10.00; v_name:='Sicilian Pistachio & Gold Dust Chocolate Bar';
+      when 8 then v_price:=10.50; v_name:='Raspberry Gold Leaf & Flaked Almond Dark Bar';
     end case;
     insert into public.order_items (order_id, product_id, product_name, unit_price, quantity)
     values (v_order_id, v_product_id, v_name, v_price, v_quantity);

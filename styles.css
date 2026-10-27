@@ -2,12 +2,13 @@
 
 /* Real illustrative package artwork (local SVG image assets) */
 .product-visual{isolation:isolate}
-.product-visual:after{z-index:0}
-.product-image{position:relative;z-index:1;width:min(88%,230px);height:94%;object-fit:contain;filter:drop-shadow(6px 9px 4px #321b1228);transition:transform .5s var(--ease)}
-.product-card:hover .product-image{transform:translateY(-5px) rotate(2deg) scale(1.035)}
+.product-visual:after{display:none}
+.product-image{position:relative;z-index:1;width:100%;height:100%;object-fit:cover;transition:transform .5s var(--ease)}
+.product-card:hover .product-image{transform:scale(1.06)}
 .cart-thumb{overflow:hidden}
-.cart-thumb .product-image{width:100%;height:100%;object-fit:contain}
-.modal-product .product-image{width:100%;height:100%;max-height:360px;object-fit:contain}
+.cart-thumb .product-image{width:100%;height:100%;object-fit:cover;border-radius:3px}
+.modal-product .product-visual{overflow:hidden;border-radius:6px;height:380px}
+.modal-product .product-image{width:100%;height:100%;max-height:380px;object-fit:cover;border-radius:6px}
 .cart-thumb .product-pack{display:none}
 .checkout-page{min-height:100vh}
 .checkout-shell{max-width:1120px;margin:0 auto;padding:55px 5% 90px}
@@ -75,7 +76,7 @@ border-radius:3px;isolation:isolate}
 .hero-photo-copy h1 span{color:var(--pink)}
 .hero-promo{position:absolute;right:5%;top:8%;bottom:8%;width:min(245px,28%);background:var(--brown);color:var(--cream);padding:20px 16px 17px;display:flex;flex-direction:column;align-items:center;justify-content:space-between;text-align:center;box-shadow:10px 14px 0 #321b1230;z-index:3}
 .promo-kicker{font:8px var(--mono);letter-spacing:.08em}
-.hero-promo img{width:75%;height:58%;object-fit:contain;filter:drop-shadow(4px 7px 2px #0004);transition:transform .5s var(--ease)}
+.hero-promo img{width:100%;height:58%;object-fit:cover;border-radius:4px;filter:drop-shadow(4px 7px 2px #0004);transition:transform .5s var(--ease)}
 .hero-promo:hover img{transform:rotate(4deg) scale(1.04)}
 .hero-promo p{font-size:16px;font-weight:800;line-height:.94;letter-spacing:-.04em;margin:0}
 .hero-promo .btn{width:100%;justify-content:center;padding:11px;font-size:8px}
@@ -98,11 +99,9 @@ border-radius:3px;isolation:isolate}
 .shop-intro span{font-size:8px}
 .product-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
 .product-card{border:1px solid var(--brown);border-radius:5px;background:var(--cream)}
-.product-visual{height:clamp(170px,22vw,275px);background:var(--blue)!important}
-.product-card:nth-child(3n+2) .product-visual{background:var(--pink)!important}
-.product-card:nth-child(3n) .product-visual{background:var(--lime)!important}
-.product-visual:after{width:95px;height:95px;border:0;background:#321b1210}
-.product-image{width:min(72%,185px);height:94%;object-fit:contain;filter:drop-shadow(7px 9px 2px #321b1228)}
+.product-visual{height:clamp(200px,25vw,300px);position:relative;overflow:hidden;cursor:pointer}
+.product-visual:after{display:none}
+.product-image{width:100%;height:100%;object-fit:cover}
 .product-info{padding:11px 11px 10px}
 .product-info h3{font-size:clamp(11px,1.3vw,15px);min-height:30px}
 .product-type{font-size:7px}

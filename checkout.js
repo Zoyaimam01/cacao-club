@@ -2,21 +2,21 @@ import { createClient } from "https://esm.sh/@supabase/supabase-js@2";
 const cfg=window.SUPABASE_CONFIG||{};
 const supabase=cfg.url&&cfg.anonKey?createClient(cfg.url,cfg.anonKey):null;
 const products=[
-{id:1,name:"72% Dark Chocolate Bar with Raspberry",price:8.5,weight:"85G"},
-{id:2,name:"72% Dark Chocolate Clusters with Raspberry",price:11,weight:"120G"},
-{id:3,name:"Mini 72% Dark Chocolate Bar with Raspberry",price:5.5,weight:"45G"},
-{id:4,name:"Sea Salt Crunch Chocolate Bar",price:8,weight:"85G"},
-{id:5,name:"Milk Chocolate Hazelnut Bites",price:10,weight:"120G"},
-{id:6,name:"The Daily Pause Gift Box",price:28,weight:"6 PIECES"},
-{id:7,name:"Salted Caramel Chocolate Bar",price:8.5,weight:"85G"},
-{id:8,name:"Chocolate Discovery Box",price:34,weight:"12 PIECES"}
+{id:1,name:"Affirmations Daily Pause Chocolate Gift Box",price:28,weight:"16 PIECES"},
+{id:2,name:"Artisan Wild Cranberry & Roasted Nut Bar",price:9.5,weight:"90G"},
+{id:3,name:"Dark Chocolate Almond & Cranberry Bites",price:11,weight:"125G"},
+{id:4,name:"Artisanal Chocolate Baton Tasting Box",price:34,weight:"8 BARS"},
+{id:5,name:"Marshmallow Cream & Salted Caramel Peanut Bar",price:8.5,weight:"95G"},
+{id:6,name:"Whole Hazelnut Cream Stuffed Chocolate Bar",price:8.5,weight:"90G"},
+{id:7,name:"Sicilian Pistachio & Gold Dust Chocolate Bar",price:10,weight:"85G"},
+{id:8,name:"Raspberry Gold Leaf & Flaked Almond Dark Bar",price:10.5,weight:"90G"}
 ];
 const $=s=>document.querySelector(s), money=n=>"$"+n.toFixed(2);
 let cart=JSON.parse(localStorage.getItem("cacao-cart")||"{}"), currentUser=null;
 function items(){return Object.entries(cart).map(([id,quantity])=>({product:products.find(p=>p.id===+id),quantity:+quantity})).filter(x=>x.product&&x.quantity>0)}
 function render(){
   const list=items(),subtotal=list.reduce((sum,x)=>sum+x.product.price*x.quantity,0);
-  $("#checkout-items").innerHTML=list.length?list.map(({product:p,quantity:q})=>`<div class="checkout-item"><img src="assets/chocolate-${p.id}.svg" alt="${p.name}"><div><h3>${p.name}</h3><p>QTY ${q} · ${p.weight}</p></div><strong>${money(p.price*q)}</strong></div>`).join(""):`<p>Your bag is empty. <a href="index.html#shop"><u>Find your flavour</u></a> or <button type="button" id="add-sample-btn" style="border:0;background:none;text-decoration:underline;cursor:pointer;font:inherit;font-weight:700;color:var(--brown);">add a sample bar to bag</button>.</p>`;
+  $("#checkout-items").innerHTML=list.length?list.map(({product:p,quantity:q})=>`<div class="checkout-item"><img src="assets/${p.id}.jpg" alt="${p.name}"><div><h3>${p.name}</h3><p>QTY ${q} · ${p.weight}</p></div><strong>${money(p.price*q)}</strong></div>`).join(""):`<p>Your bag is empty. <a href="index.html#shop"><u>Find your flavour</u></a> or <button type="button" id="add-sample-btn" style="border:0;background:none;text-decoration:underline;cursor:pointer;font:inherit;font-weight:700;color:var(--brown);">add a sample bar to bag</button>.</p>`;
   $("#checkout-subtotal").textContent=money(subtotal);
   $("#checkout-total").textContent=money(subtotal);
   $("#order-now").disabled=!list.length;
